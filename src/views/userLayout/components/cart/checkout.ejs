@@ -1,0 +1,395 @@
+<div class="modal fade" id="product-view">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <button class="modal-close icofont-close" data-bs-dismiss="modal"></button>
+      <div class="product-view">
+        <div class="row">
+          <div class="col-md-6 col-lg-6">
+            <div class="view-gallery">
+              <div class="view-label-group">
+                <label class="view-label new">new</label><label class="view-label off">-10%</label>
+              </div>
+              <ul class="preview-slider slider-arrow">
+                <li><img src="/images/product/01.jpg" alt="product" /></li>
+                <li><img src="/images/product/01.jpg" alt="product" /></li>
+                <li><img src="/images/product/01.jpg" alt="product" /></li>
+                <li><img src="/images/product/01.jpg" alt="product" /></li>
+                <li><img src="/images/product/01.jpg" alt="product" /></li>
+                <li><img src="/images/product/01.jpg" alt="product" /></li>
+                <li><img src="/images/product/01.jpg" alt="product" /></li>
+              </ul>
+              <ul class="thumb-slider">
+                <li><img src="/images/product/01.jpg" alt="product" /></li>
+                <li><img src="/images/product/01.jpg" alt="product" /></li>
+                <li><img src="/images/product/01.jpg" alt="product" /></li>
+                <li><img src="/images/product/01.jpg" alt="product" /></li>
+                <li><img src="/images/product/01.jpg" alt="product" /></li>
+                <li><img src="/images/product/01.jpg" alt="product" /></li>
+                <li><img src="/images/product/01.jpg" alt="product" /></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6">
+            <div class="view-details">
+              <h3 class="view-name">
+                <a href="product-video.html">existing product name</a>
+              </h3>
+              <div class="view-meta">
+                <p>SKU:<span>1234567</span></p>
+                <p>BRAND:<a href="#">radhuni</a></p>
+              </div>
+              <div class="view-rating">
+                <i class="active icofont-star"></i><i class="active icofont-star"></i><i
+                  class="active icofont-star"></i><i class="active icofont-star"></i><i class="icofont-star"></i><a
+                  href="product-video.html">(3 reviews)</a>
+              </div>
+              <h3 class="view-price">
+                <del>$38.00</del><span>$24.00<small>/per kilo</small></span>
+              </h3>
+              <p class="view-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit non
+                tempora magni repudiandae sint suscipit tempore quis maxime
+                explicabo veniam eos reprehenderit fuga
+              </p>
+              <div class="view-list-group">
+                <label class="view-list-title">tags:</label>
+                <ul class="view-tag-list">
+                  <li><a href="#">organic</a></li>
+                  <li><a href="#">vegetable</a></li>
+                  <li><a href="#">chilis</a></li>
+                </ul>
+              </div>
+              <div class="view-list-group">
+                <label class="view-list-title">Share:</label>
+                <ul class="view-share-list">
+                  <li>
+                    <a href="#" class="icofont-facebook" title="Facebook"></a>
+                  </li>
+                  <li>
+                    <a href="#" class="icofont-twitter" title="Twitter"></a>
+                  </li>
+                  <li>
+                    <a href="#" class="icofont-linkedin" title="Linkedin"></a>
+                  </li>
+                  <li>
+                    <a href="#" class="icofont-instagram" title="Instagram"></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="view-add-group">
+                <button class="product-add" title="Add to Cart">
+                  <i class="fas fa-shopping-basket"></i><span>add to cart</span>
+                </button>
+                <div class="product-action">
+                  <button class="action-minus" title="Quantity Minus">
+                    <i class="icofont-minus"></i></button><input class="action-input" title="Quantity Number"
+                    type="text" name="quantity" value="1" /><button class="action-plus" title="Quantity Plus">
+                    <i class="icofont-plus"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="view-action-group">
+                <a class="view-wish wish" href="#" title="Add Your Wishlist"><i class="icofont-heart"></i><span>add to
+                    wish</span></a><a class="view-compare" href="compare.html" title="Compare This Item"><i
+                    class="fas fa-random"></i><span>Compare This</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="inner-section single-banner" style="background: url(/images/web-banner.jpg) no-repeat center">
+  <div class="container">
+    <h2>Đơn hàng </h2>
+  </div>
+</section>
+<section class="inner-section checkout-part">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-12">
+        <div class="account-card">
+          <div class="account-title">
+            <h4>Giỏ hàng của bạn</h4>
+          </div>
+          <div class="account-content">
+            <div class="table-scroll">
+              <table class="table-list">
+                
+                <% if(orders.length===0 ){ %>
+
+                  <tr>
+                    <div class="notFoundBook">
+                      <img src="/images/NotFound.svg" alt="">
+                      <p class="notFound"> Giỏ hàng của bạn đang rỗng :(
+                      </p>
+                    </div>
+
+                  </tr>
+                  <%}else{ %>
+                <thead>
+                  <tr>
+                    <th scope="col">STT</th>
+                    <th scope="col">Hình ảnh</th>
+                    <th scope="col">Tên sản phẩm</th>
+
+                    <th scope="col">Thể loại</th>
+                    <th scope="col">Số lượng</th>
+                    <th scope="col">Tổng số tiền</th>
+                    <th scope="col">hành động</th>
+                 
+
+
+                    
+                  </tr>
+                </thead>
+                <tbody>
+
+
+                      <%orders.forEach((order,index)=>{ %>
+
+
+
+                        <tr>
+                          <td class="table-serial">
+                            <h6>
+                              <%=index+1 %>
+                            </h6>
+                          </td>
+                          <td class="table-image">
+                            <img src="<%=order.id_book.img%> " alt="product" />
+                          </td>
+                          <td class="table-name">
+                            <h6>
+                              <%=order.id_book.name %>
+                            </h6>
+                          </td>
+
+                          <td class="table-brand">
+                            <h6>
+                              <%=order.id_book.categorybook.name %>
+                            </h6>
+                          </td>
+                          <td class="table-quantity">
+                            <h6>
+                              <%=order.quantity %>
+                            </h6>
+                          </td>
+                          <td class="table-price">
+                            <h6>
+                              <%=order.total%> <span class="vnd">VND</span>
+                            </h6>
+                          </td>
+                          <td class="table-action">
+
+                            <a class="trash" title="Remove Wishlist" data-id="<%=order._id  %> "><i
+                                class="icofont-trash"></i></a>
+                          </td>
+                        </tr>
+
+
+                        <%}) %>
+                      
+
+                </tbody>
+              </table>
+            </div>
+            <div class="chekout-coupon">
+              <button class="coupon-btn">Bạn có mã giảm giá?</button>
+              <form class="coupon-form" method="POST" action="/order/add-coupon">
+                <input name="idCoupon" type="text" placeholder="Enter your coupon code" /><button
+                  type="submit"><span>apply</span></button>
+              </form>
+            </div>
+            <div class="checkout-charge">
+              <ul>
+                <li><span>Tổng tiền:</span><span class="total-cart">
+                    <%= total%><span class="vnd">VND</span>
+                  </span></li>
+                <li><span>Số tiền đã giảm:</span><span class="total-cart">
+                    <%=coupon %><span class="vnd">VND</span>
+                  </span></li>
+                <li>
+                  <span>Tổng tiền:</span><span class="total-cart">
+                    <%=subTotal %><span class="vnd">VND</span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-lg-12">
+        <div class="account-card">
+          <div class="account-title">
+            <h4>Số điện thoại</h4>
+       
+          </div>
+          <div class="account-content">
+            <div class="row">
+              <div class="col-md-6 col-lg-4 alert fade show">
+                <%= user.phone %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12">
+        <div class="account-card">
+          <div class="account-title">
+            <h4>Địa chỉ</h4>
+          </div>
+          <div class="account-content">
+            <div class="row">
+              <div class="col-md-6 col-lg-4 alert fade show">
+                <div class="profile-card address active">
+               
+                  <p>
+                    <%=user.address %>
+                  </p>
+               
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<div class="modal fade" id="contact-add">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <button class="modal-close" data-bs-dismiss="modal">
+        <i class="icofont-close"></i>
+      </button>
+      <form class="modal-form">
+        <div class="form-title">
+          <h3>add new contact</h3>
+        </div>
+        <div class="form-group">
+          <label class="form-label">title</label><select class="form-select">
+            <option selected>choose title</option>
+            <option value="primary">primary</option>
+            <option value="secondary">secondary</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">number</label><input class="form-control" type="text"
+            placeholder="Enter your number" />
+        </div>
+        <button class="form-btn" type="submit">save contact info</button>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="address-add">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <button class="modal-close" data-bs-dismiss="modal">
+        <i class="icofont-close"></i>
+      </button>
+      <form class="modal-form">
+        <div class="form-title">
+          <h3>add new address</h3>
+        </div>
+        <div class="form-group">
+          <label class="form-label">title</label><select class="form-select">
+            <option selected>choose title</option>
+            <option value="home">home</option>
+            <option value="office">office</option>
+            <option value="Bussiness">Bussiness</option>
+            <option value="academy">academy</option>
+            <option value="others">others</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">address</label><textarea class="form-control"
+            placeholder="Enter your address"></textarea>
+        </div>
+        <button class="form-btn" type="submit">save address info</button>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="payment-add">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <button class="modal-close" data-bs-dismiss="modal">
+        <i class="icofont-close"></i>
+      </button>
+      <form class="modal-form">
+        <div class="form-title">
+          <h3>add new payment</h3>
+        </div>
+        <div class="form-group">
+          <label class="form-label">card number</label><input class="form-control" type="text"
+            placeholder="Enter your card number" />
+        </div>
+        <button class="form-btn" type="submit">save card info</button>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="contact-edit">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <button class="modal-close" data-bs-dismiss="modal">
+        <i class="icofont-close"></i>
+      </button>
+      <form class="modal-form">
+        <div class="form-title">
+          <h3>edit contact info</h3>
+        </div>
+        <div class="form-group">
+          <label class="form-label">title</label><select class="form-select">
+            <option value="primary" selected>primary</option>
+            <option value="secondary">secondary</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">number</label><input class="form-control" type="text" value="+8801838288389" />
+        </div>
+        <button class="form-btn" type="submit">save contact info</button>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="address-edit">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <button class="modal-close" data-bs-dismiss="modal">
+        <i class="icofont-close"></i>
+      </button>
+      <form class="modal-form">
+        <div class="form-title">
+          <h3>edit address info</h3>
+        </div>
+        <div class="form-group">
+          <label class="form-label">title</label><select class="form-select">
+            <option value="home" selected>home</option>
+            <option value="office">office</option>
+            <option value="Bussiness">Bussiness</option>
+            <option value="academy">academy</option>
+            <option value="others">others</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">address</label><textarea class="form-control"
+            placeholder="jalkuri, fatullah, narayanganj-1420. word no-09, road no-17/A"></textarea>
+        </div>
+        <button class="form-btn" type="submit">save address info</button>
+      </form>
+    </div>
+  </div>
+  
+</div>
+<div class="checkout-proced">
+  <a class="btn btn-inline">xác nhận đơn hàng</a>
+</div>
+<% } %>

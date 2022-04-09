@@ -1,0 +1,53 @@
+<div class="customer mt-3">
+    <ul>
+        <li>Tên: <strong><%=orders.id_user.name%></strong></li>
+        <li>SĐT: <strong><%=orders.id_user.phone%></strong></li>
+        <li>Địa chỉ: <strong><%=orders.id_user.address%></strong></li>
+        <li>Email: <strong><%=orders.id_user.email%></strong></li>
+        <li>Trạng thái: <strong>
+            <% if(orders.status == 2){%>
+                <span class ="btn btn-success btn-xs">Xác nhận</span>
+           <% } %>
+           <% if(orders.status == 1){%>
+            <span class ="btn btn-warning btn-xs">Đang chờ</span>
+       <% } %>
+        </strong></li>
+    </ul>
+</div>
+
+<div class="carts">
+    <table class="table">
+        <tbody>
+        <tr class="table_head">
+            <th class="column-1">Ảnh</th>
+            <th class="column-2">Tên sản phẩm</th>
+           
+            <th class="column-4">Số lượng</th>
+            <th class="column-5">Tổng</th>
+        </tr>
+        <% orders.items.forEach(order => {%>
+            <tr>
+                <td class="column-1">
+                    <div class="how-itemcart1">
+                        <img src="<%=order.id_book.img  %> " alt="IMG" style="width: 100px">
+                    </div>
+                </td>
+                <td class="column-2"><%=order.id_book.name %></td>
+                
+             
+                
+                
+                <td class="column-4"><%=order.quantity %></td>
+                <td class="column-5"><%=order.total%> </td>
+      </tr>
+      <% })%>
+            <tr class="table-head">
+                <th class="column-1"></th>
+            <th class="column-2"></th>
+           
+            <th class="column-4"></th>
+            <th class="column-5">Tổng: <%=orders.subTotal  %> </th>
+            </tr>
+        </tbody>
+    </table>
+</div>

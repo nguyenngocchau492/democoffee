@@ -1,0 +1,82 @@
+<div class="card card-primary">
+  <div class="card-header">
+    <h3 class="card-title">Thêm sản phẩm</h3>
+  </div>
+  <!-- /.card-header -->
+  <!-- form start -->
+  <form method="post" action="/coffee" enctype="multipart/form-data">
+    <div class="card-body">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Tên</label>
+        <input type="text" class="form-control" name="name" id="exampleInputEmail1" placeholder="Nhập tên">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Thương hiệu</label>
+        <input type="text" class="form-control" name="author" id="exampleInputPassword1" placeholder="Nhập thương hiệu">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Thể loại</label>
+        <!-- <input type="text" class="form-control" name="categorybook" id="exampleInputPassword1" placeholder="Enter Author"> -->
+        <select name="categorybook" id="">
+          <% category.forEach(cate=>{ %>
+            <option class="form-control" value="<%=cate._id%>">
+              <%=cate.name%>
+            </option>
+            <% }) %>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">Giá</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="price_buy" placeholder="Nhập giá bán">
+      </div>
+    
+      <div class="form-group">
+        <label for="exampleInputEmail1">Số lượng</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="quantity" placeholder="Số lượng">
+      </div>
+      
+      <div class="form-group">
+        <label for="exampleInputEmail1">Tiêu đề</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="title" placeholder="Nhập tiêu đề">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Mô tả</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="description"
+          placeholder="Nhập mô tả">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputFile">Tải lên </label>
+        <div class="input-group">
+          <div class="custom-file">
+            <input type="file" accept="image/*" class="custom-file-input" name="img" id="exampleInputFile">
+            <label class="custom-file-label" for="exampleInputFile">Chọn ảnh</label>
+          </div>
+          <div class="input-group-append">
+            <span class="input-group-text">Tải lên</span>
+          </div>
+        </div>
+        <div class="input-group">
+          <img src="#" width="150px" style="margin:10px 0">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputFile">Tải lên ảnh khác</label>
+        <div class="input-group">
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" name="img_invole" multiple id="exampleInputFile">
+            <label class="custom-file-label" for="exampleInputFile">Chọn ảnh</label>
+          </div>
+          <div class="input-group-append">
+            <span class="input-group-text">Tải lên</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card-footer">
+      <button type="submit" class="btn btn-primary">Thêm</button>
+    </div>
+  </form>
+</div>

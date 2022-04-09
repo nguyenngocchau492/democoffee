@@ -1,0 +1,104 @@
+<div class="card card-primary">
+  <div class="card-header">
+    <h3 class="card-title">Sửa thông tin sản phẩm</h3>
+  </div>
+  <!-- /.card-header -->
+  <!-- form start -->
+  <form method="post" action="/coffee/<%= book._id %>" enctype="multipart/form-data">
+    <div class="card-body">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Tên sản phẩm</label>
+        <input type="text" class="form-control" name="name" id="exampleInputEmail1"
+          value="<%= book.name  %> ">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Thương hiệu</label>
+        <input type="text" class="form-control" name="author" id="exampleInputPassword1" 
+          value="<%= book.author  %> ">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Thể loại</label>
+
+        <!-- <input type="text" class="form-control" name="categorybook" id="exampleInputPassword1" placeholder="Enter Author"> -->
+        <select name="categorybook" id="">
+          <% category.forEach(cate=>{ %>
+
+            <option class="form-control" <% if(cate._id===book.categorybook._id){ %>
+              selected
+              <% } %>
+                value="<%=cate._id%>"><%=cate.name%>
+            </option>
+            <% }) %>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">Giá</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="price_buy" 
+          value="<%= book.price_buy %>">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Số lượng</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="quantity"
+          value="<%=book.quantity  %> ">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">Tiêu đề</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="title" 
+          value="<%= book.title %>">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Mô tả</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="description"
+          value="<%= book.description %>">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputFile">Tải lên ảnh sản phẩm</label>
+        <div class="input-group">
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" name="img" id="exampleInputFile">
+            <label class="custom-file-label" for="exampleInputFile">Chọn ảnh</label>
+          </div>
+          <div class="input-group-append">
+            <span class="input-group-text">Tải lên</span>
+          </div>
+        </div>
+        <div class="input-group">
+          <div class="input-group">
+            <input type="hidden" name="image" value="<%=book.img %>">
+            <img src="<%=book.img %> " width="150px" style="margin:10px 0">
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputFile">Ảnh khác</label>
+        <div class="input-group">
+          <div class="custom-file">
+<p> </p>
+            <input type="file" class="custom-file-input" name="img_invole" multiple id="exampleInputFile">
+            <input type="hidden" name="img_involes" value=<%=book.img_invole %>>
+            <label class="custom-file-label" for="exampleInputFile">Chọn ảnh</label>
+
+
+          </div>
+
+
+
+          <div class="input-group-append">
+
+            <span class="input-group-text">Tải ảnh</span>
+          </div>
+        </div>
+      </div>
+      <div class="img-invole">
+        <%book.img_invole.forEach((img)=>{ %>
+          <img src="<%=img  %> " alt="">
+          <% }) %>
+      </div>
+    </div>
+    <div class="card-footer">
+      <button type="submit" class="btn btn-primary">Sửa</button>
+    </div>
+  </form>
+</div>

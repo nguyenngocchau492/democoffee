@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="template" content="greeny">
+    <meta name="title" content="greeny - Ecommerce Food Store HTML Template">
+    <meta name="keywords"
+        content="organic, food, shop, ecommerce, store, html, bootstrap, template, agriculture, vegetables, products, farm, grocery, natural, online">
+    <title>Greeny - Register</title>
+    <link rel="icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="/fonts/flaticon/flaticon.css">
+    <link rel="stylesheet" href="/fonts/icofont/icofont.min.css">
+    <link rel="stylesheet" href="/fonts/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="/vendor/venobox/venobox.min.css">
+    <link rel="stylesheet" href="/vendor/slickslider/slick.min.css">
+    <link rel="stylesheet" href="/vendor/niceselect/nice-select.min.css">
+    <link rel="stylesheet" href="/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/user-auth.css">
+</head>
+
+<body>
+    <section class="user-form-part">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-10 col-md-12 col-lg-12 col-xl-10">
+                    <div class="user-form-logo">   <a href="/" class="logo"> <img src="/images/coffee-cup (5).png" alt="">Coffee Shop</a>  </div>
+                    <div class="user-form-card">
+                        <div class="user-form-title">
+                            <h2>Đăng ký !</h2>
+                     
+                        </div>
+                        <div class="user-form-group">
+                            <ul class="user-form-social">
+                                <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i>Đăng nhập với Facebook</a>
+                                </li>
+                               
+                                <li><a href="#" class="google"><i class="fab fa-google"></i>Đăng nhập với Google</a></li>
+                               
+                                      <div class="preview">
+                                        <img id="blah" src="#" alt="your image" />
+                                      </div>
+                            </ul>
+
+
+                            <div class="user-form-divider">
+                                <p>Hoặc</p>
+                            </div>
+                            <form class="user-form" method="POST" action="/user/register" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <div class="emty-name">
+                                        <% if(typeof message !== "undefined"){ %>
+                                            <%= message %>
+                                            <% } %>     
+                                    </div>
+                                    <input type="text" class="form-control" id="name" name="name"
+                                        placeholder="Nhập tên">
+                                </div>
+                                <div class="form-group">
+                                    <div class="emty-email">
+                                   
+
+                                    </div>
+
+
+
+                                    <input type="email" name="email" class="form-control" id="email"
+                                        placeholder="Nhập email">
+                                </div>
+                                <div class="form-group">
+                                    <div class="empty-password"></div>
+                                    <input type="password" class="form-control" name="password" id="password"
+                                        placeholder="Nhập mật khẩu">
+                                </div>
+                                <div class="form-group">
+
+                                    <input type="address" class="form-control" name="address"
+                                        placeholder="Nhập địa chỉ" id="adress">
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <input type="phone" class="form-control" name="phone" placeholder="Nhập SĐT"
+                                        id="phone">
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <input type="file" class="form-control" name="avatar" id="avatar" onchange="loadFile(event)">
+                                </div>
+
+                                <div class="form-button"><button type="submit">Đăng ký</button></div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="user-form-remind">
+                        <p>Đã có tài khoản?<a href="/user/login">Đăng nhập ngay</a></p>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="/vendor/bootstrap/bootstrap.min.js"></script>
+
+    <script src="/vendor/bootstrap/jquery-1.12.4.min.js"></script>
+    <script src="/vendor/bootstrap/popper.min.js"></script>
+
+    <script src="/vendor/countdown/countdown.min.js"></script>
+    <script src="/vendor/niceselect/nice-select.min.js"></script>
+    <script src="/vendor/slickslider/slick.min.js"></script>
+    <script src="/vendor/venobox/venobox.min.js"></script>
+    <script src="/js/nice-select.js"></script>
+    <script src="/js/countdown.js"></script>
+    <script src="/js/accordion.js"></script>
+    <script src="/js/venobox.js"></script>
+    <script src="/js/slick.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/register.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+
+<div class="card card-primary">
+  <div class="card-header">
+    <h3 class="card-title">Sửa mã giảm giá</h3>
+  </div>
+  <!-- /.card-header -->
+  <!-- form start -->
+  <form action="/coupon/<%=coupons._id  %> " method="post">
+    <div class="card-body">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Tên</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="name" placeholder="Nhập tên" value="<%=coupons.name  %> ">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Tiêu đề</label>
+        <input type="text" class="form-control" name="title" id="exampleInputPassword1" placeholder="Nhập tiêu đề" value="<%=coupons.title  %> ">
+      </div>
+      <div class="form-group">
+          <label>Ngày bắt đầu</label>
+            <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                <input name="date_from" type="datetime-local" class="form-control date_from" data-target="#reservationdate" value=<%=new Date(coupons.date_from).toISOString().slice(0,16)  %>>
+            </div>
+        </div>
+        <div class="form-group">
+          <label>Ngày kết thúc</label>
+            <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                <input name="date_to" type="datetime-local" class="form-control" data-target="#reservationdate" value=<%=new Date(coupons.date_to).toISOString().slice(0,16)  %>>
+           
+            </div>
+        </div>  
+      <div class="form-group">
+          <label for="exampleInputEmail1">Mã</label>
+         
+          <input name="code" type="text" class="code-value form-control" id="exampleInputEmail1" placeholder="Đổi ngẫu nhiên hoặc nhập" value="<%=coupons.code  %>">
+          <button type="button" class="btn create-code mt-3 btn-primary">Đổi mã mới</button>
+      </div>
+      <div class="form-group">
+          <label for="exampleInputEmail1">Số tiền muốn giảm</label>
+          <input type="text" name="number_decrement" class="form-control" id="exampleInputEmail1" placeholder="Nhập số tiền muốn giảm" value="<%=coupons.number_decrement  %>">
+      </div>
+
+    <div class="card-footer">
+      <button type="submit" class="btn btn-primary">Sửa</button>
+    </div>
+  </form>
+</div>

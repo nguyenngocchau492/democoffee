@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trang Quản Lí</title>
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+    <script src="https://cdn.ckeditor.com/4.18.0/standard/ckeditor.js"></script>
+  </head>
+
+<body class="sidebar-mini" style="height: auto;">
+  <div class="wrapper">
+    <%- include("partial/header") -%>
+
+      <%- include("partial/sidebar") -%>
+
+        <div class="content-wrapper" style="min-height: 1345.45px;">
+          <section class="content">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-12">
+
+                  <%- include(body) -%>
+                    <%- include("partial/footer") %>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+  </div>
+</body>
+
+</html>

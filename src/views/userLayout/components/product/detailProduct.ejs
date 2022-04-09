@@ -1,0 +1,276 @@
+<div class="modal fade" id="product-view">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <button class="modal-close icofont-close" data-bs-dismiss="modal"></button>
+      <div class="product-view">
+        <div class="row">
+          <div class="col-md-6 col-lg-6">
+            <div class="view-gallery">
+             
+              <ul class="preview-slider slider-arrow">
+                <li><img src="<%=book.img %> " alt="product" /></li>
+                <li><img src="<%=book.img %> " alt="product" /></li>
+                <li><img src="<%=book.img %> " alt="product" /></li>
+                <li><img src="<%=book.img %> " alt="product" /></li>
+                <li><img src="<%=book.img %> " alt="product" /></li>
+                <li><img src="<%=book.img %> " alt="product" /></li>
+                <li><img src="<%=book.img %> " alt="product" /></li>
+
+              </ul>
+              <ul class="thumb-slider">
+                <li><img src="<%=book.img %> " alt="product" /></li>
+                <li><img src="<%=book.img %> " alt="product" /></li>
+                <li><img src="<%=book.img %> " alt="product" /></li>
+                <li><img src="<%=book.img %> " alt="product" /></li>
+                <li><img src="<%=book.img %> " alt="product" /></li>
+                <li><img src="<%=book.img %> " alt="product" /></li>
+                <li><img src="<%=book.img %> " alt="product" /></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6">
+            <div class="view-details">
+              <h3 class="view-name">
+                <a href="/book/<%=book._id  %> ">
+                  <%=book.name %>
+                </a>
+              </h3>
+
+
+              <h3 class="view-price">
+                <del>$38.00</del><span>$24.00<small>/per kilo</small></span>
+              </h3>
+              <p class="view-desc">
+                <%=book.description %>
+              </p>
+
+              <div class="view-list-group">
+                <label class="view-list-title">Share:</label>
+                <ul class="view-share-list">
+                  <li>
+                    <a href="#" class="icofont-facebook" title="Facebook"></a>
+                  </li>
+                  <li>
+                    <a href="#" class="icofont-twitter" title="Twitter"></a>
+                  </li>
+                  <li>
+                    <a href="#" class="icofont-linkedin" title="Linkedin"></a>
+                  </li>
+                  <li>
+                    <a href="#" class="icofont-instagram" title="Instagram"></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="view-add-group">
+                <button class="product-add" title="Add to Cart">
+                  <i class="fas fa-shopping-basket"></i><span>Thêm vào giỏ hàng</span>
+                </button>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="single-banner inner-section" style="">
+  <div class="container">
+    <h2>Chi tiết sản phẩm</h2>
+ 
+  </div>
+</section>
+<section class="inner-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="details-gallery">
+          <div class="details-label-group">
+          
+          </div>
+          <ul class="details-preview">
+          <li>
+            <img src="<%=book.img %> " alt="product"/>
+          </li>
+            <% book.img_invole.forEach(bok=>{ %>
+              <li>
+                <img src="<%=bok %> " alt="product" />
+              </li>
+              <% }) %>
+          </ul>
+          <ul class="details-thumb">
+            <li>
+              <img src="<%=book.img %> " alt="product"/>
+            </li>
+            <% book.img_invole.forEach(bok=>{ %>
+              <li><img src="<%=bok %> " alt="product" /></li>
+              <% }) %>
+
+
+          </ul>
+        </div>
+      </div>
+
+
+
+      <div class="col-lg-6">
+      
+        <div class="details-content">
+          <h3 class="details-name">
+            <a href="#">
+              <%=book.name %>
+            </a>
+          </h3>
+          <div class="details-meta">
+
+            <p>Danh mục:<a href="#">
+                <%=book.categorybook.name %>
+              </a></p>
+          </div>
+
+          <h3 class="details-price">
+            <span data-type="buy" class="price active">Giá:<small><%=book.price_buy.toLocaleString('it-IT', {
+              style: 'currency',
+              currency: 'VND'
+          }); %></small> </span>
+              <input type="hidden" name="type_order" class="type-order " >
+          </h3>
+          <p class="details-desc">
+            <%=book.description%>
+          </p>
+          <input type="hidden" name="" class="id-book" value=<%=book._id%>>
+        
+          <div class="details-add-group">
+
+            <div class="product-action"><button class="action-minus" title="Quantity Minus"><i
+                  class="icofont-minus"></i></button><input class="action-input" title="Quantity Number" type="text"
+                name="quantity" value="1"><button class="action-plus" title="Quantity Plus"><i
+                  class="icofont-plus"></i></button></div>
+
+            <button class="product-add add-cart" title="Add to Cart">
+              <i class="fas fa-shopping-basket"></i><span>Thêm vào giỏ hàng</span>
+            </button>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<section class="inner-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="#tab-desc" class="tab-link active" data-bs-toggle="tab">Mô tả</a>
+          </li>
+          <li>
+            <a href="#tab-reve" class="tab-link" data-bs-toggle="tab">Đánh giá</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="tab-pane fade show active" id="tab-desc">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="product-details-frame">
+            <div class="tab-descrip">
+              <p>
+                <%=book.description %>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="tab-spec">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="product-details-frame">
+            <table class="table table-bordered">
+              <tbody>
+
+                <tr>
+                  <th scope="row">Weight</th>
+                  <td>1kg, 2kg</td>
+                </tr>
+                <tr>
+                  <th scope="row">Styles</th>
+                  <td>@Girly</td>
+                </tr>
+                <tr>
+                  <th scope="row">Properties</th>
+                  <td>Short Dress</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="tab-reve">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="product-details-frame">
+            <div class="fb-comments" data-href="http://e-medical.herokuapp.com/detail-specialty/<%=book._id  %> " data-width="100%"
+            data-numposts="5"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="inner-section">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="section-heading">
+          <h2>Các cuốn sách liên quan</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+      <% books.forEach(bok=>{ %>
+
+
+        <div class="col">
+          <div class="product-card">
+            <div class="product-media">
+            
+             <a class="product-image" href="/book/<%=bok._id  %> "><img
+                  src="<%=bok.img  %> " alt="product" /></a>
+
+            </div>
+            <div class="product-content">
+              <h6 class="product-name">
+                <a href="/book/<%=bok._id  %> ">
+                  <%=bok.name %>
+                </a>
+              </h6>
+              <h6 class="product-price">
+                <span>Giá:<%=bok.price_buy.toLocaleString('it-IT', {
+                  style: 'currency',
+                  currency: 'VND'
+              }); %></span>
+              </h6>
+
+            </div>
+          </div>
+        </div>
+
+
+        <% }) %>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-btn-25">
+          <a href="/book" class="btn btn-outline"><i class="fas fa-eye"></i><span> Xem thêm </span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

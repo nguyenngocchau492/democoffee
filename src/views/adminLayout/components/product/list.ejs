@@ -1,0 +1,74 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card card-primary">
+      <div class="card-header">
+        <h3 class="card-title">Danh sách sản phẩm</h3>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body table-responsive p-0" style="height: 600px;">
+        <table class="table table-head-fixed text-nowrap">
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Tên</th>
+              <th>Thương hiệu</th>
+              <th>Danh mục</th>
+              <th>Số lượng</th>
+              <th>Ảnh</th>
+              <th>Giá</th>
+             
+              <th style="width:100px">&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% books.forEach((book,index)=>{ %>
+
+
+
+              <tr>
+                <td>
+                  <%=index+1 %>
+                </td>
+                <td>
+                  <%=book.name %>
+                </td>
+                <td>
+                  <%=book.author %>
+                </td>
+                <td>
+                  <%=book.categorybook.name %>
+                </td>
+                <td>
+                  <%=book.quantity %>
+                </td>
+                <td>
+                  <img src="<%=book.img %>" width="150px" style="margin:10px 0" alt="">
+
+                </td>
+                <td>
+                  <%=book.price_buy %>
+                </td>
+                
+                <td>
+                  <a class="btn btn-primary btn-sm" href="/coffee/<%=book._id  %> ">
+                    <i class="fas fa-edit"></i>
+                  </a>
+               <% if(role==="1"){ %>
+                <a class="btn btn-danger book btn-sm" data-id="<%=book._id  %>" onclick="Delete('book')">
+                  <input type="hidden" name="" class="bookid" value="<%=book._id%>">
+                  <i class="fas fa-trash"></i>
+                </a>
+                
+                <% } %> 
+                </td>
+              </tr>
+
+              <% }) %>
+          </tbody>
+        </table>
+      </div>
+      <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+  </div>
+</div>

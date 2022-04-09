@@ -1,0 +1,49 @@
+
+<div class="row">
+    <div class="col-12">
+      <div class="card card-primary">
+        <div class="card-header">
+          <h3 class="card-title">Danh sách thể loại</h3>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body table-responsive p-0" style="height: 600px;">
+          <table class="table table-head-fixed text-nowrap">
+            <thead>
+              <tr>
+                <th>STT</th>
+                <th>Tên</th>
+                <th>Tiêu đề</th>
+                <th>Ảnh thể loại</th>
+                <th style="width:100px">&nbsp;</th>
+              </tr>
+            </thead>
+            <tbody>
+         <% categories.forEach((category,index)=>{ %>
+          <tr>
+            <td><%=index+1  %> </td>
+            <td><%= category.name %> </td>
+            <td><%= category.title %> </td>
+            <td><img src="<%= category.iconcategory %>"width="150px" style="margin:10px 0" alt=""> </td>
+            <td>
+              <a class="btn btn-primary btn-sm" href="/category/<%=category._id  %> ">
+                <i class="fas fa-edit"></i>
+              </a>
+            <% if(role==="1"){ %>
+              <a class="btn btn-danger category btn-sm" data-id="<%=category._id%>" onclick="Delete('category')">
+                <input type="hidden" name="" class="categoryid" value="<%=category._id%>">
+                <i class="fas fa-trash"></i>
+              </a>
+              <% } %> 
+            </td>
+          </tr>
+  
+          
+          <% }) %> 
+            </tbody>
+          </table>
+        </div>
+        <!-- /.card-body -->
+      </div>
+      <!-- /.card -->
+    </div>
+  </div>

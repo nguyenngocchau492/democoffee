@@ -1,0 +1,94 @@
+<section class="inner-section single-banner" style="background: url(/images/web-banner.jpeg) no-repeat center">
+  <div class="container">
+    <h2>Toàn bộ sản phẩm </h2>
+    
+  </div>
+</section>
+<section class="inner-section shop-part">
+  <div class="container">
+    <div class="row content-reverse">
+      <div class="col-lg-3">
+        <div class="shop-widget-promo">
+          <a href="#"><img src="/images/lytra.png" alt="promo" /></a>
+        </div>
+        
+      </div>
+      <div class="col-lg-9">
+    
+        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-4">
+
+          <%if(books.length> 0) { %>
+            <%books.forEach(book=>{ %>
+
+              <div class="col">
+                <div class="product-card">
+                  <div class="product-media">
+                    <div class="product-label">
+                      
+                    </div>
+                    <a class="product-image" href="/coffee/<%=book._id  %> "><img
+                        src="<%=book.img  %> " alt="product" /></a>
+                
+                  </div>
+                  <div class="product-content">
+                 
+                    <h6 class="product-name">
+                      <a href="/coffee/<%=book._id  %> ">
+                        <%=book.name %>(<%= book.quantity%>)
+                      </a>
+                    </h6>
+                    <h6 class="product-price">
+ <span class="buy">Giá: <%=book.price_buy.toLocaleString('it-IT', {
+  style: 'currency',
+  currency: 'VND'
+}); %></span>
+                    </h6>
+                  
+                
+                  </div>
+                </div>
+              </div>
+
+              <% }) %>
+                <% } else{%>
+
+                  <div class="col">
+                    <div class="product-card">
+                      <div class="product-media">
+                        <div class="product-label">
+                          <label class="label-text new">new</label>
+                        </div>
+                        <button class="product-wish wish">
+                          <i class="fas fa-heart"></i></button><a class="product-image" href="product-video.html"><img
+                            src="<%=books.img  %> " alt="product" /></a>
+                        <div class="product-widget">
+                          <a title="Product Compare" href="compare.html" class="fas fa-random"></a><a title="Product Video"
+                            href="https://youtu.be/9xzcVxSBbG8" class="venobox fas fa-play" data-autoplay="true"
+                            data-vbtype="video"></a><a title="Product View" href="#" class="fas fa-eye"
+                            data-bs-toggle="modal" data-bs-target="#product-view"></a>
+                        </div>
+                      </div>
+                      <div class="product-content">
+                      
+                        <h6 class="product-name">
+                          <a href="product-video.html">
+                            <%=books.name %>
+                          </a>
+                        </h6>
+                        <h6 class="product-price">
+                          <del>$34</del><span>$<%=books.price_buy %> <small>/piece</small></span>
+                        </h6>
+                   
+                    
+                      </div>
+                    </div>
+                  </div>
+
+                  <% } %>
+
+        </div>
+   
+      </div>
+    </div>
+  </div>
+</section>

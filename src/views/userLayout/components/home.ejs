@@ -1,0 +1,369 @@
+<div class="modal fade" id="product-view">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <button class="modal-close icofont-close" data-bs-dismiss="modal"></button>
+      <div class="product-view">
+        <div class="row">
+          <div class="col-md-6 col-lg-6">
+            <div class="view-gallery">
+              <div class="view-label-group">
+                <label class="view-label new">new</label><label class="view-label off">-10%</label>
+              </div>
+              <ul class="preview-slider slider-arrow">
+                <li><img src="/images/product/01.jpg" alt="product" /></li>
+                <li><img src="/images/product/01.jpg" alt="product" /></li>
+                <li><img src="/images/product/01.jpg" alt="product" /></li>
+                <li><img src="/images/product/01.jpg" alt="product" /></li>
+                <li><img src="/images/product/01.jpg" alt="product" /></li>
+                <li><img src="/images/product/01.jpg" alt="product" /></li>
+                <li><img src="/images/product/01.jpg" alt="product" /></li>
+              </ul>
+              <ul class="thumb-slider">
+                <li><img src="/images/product/01.jpg" alt="product" /></li>
+                <li><img src="/images/product/01.jpg" alt="product" /></li>
+                <li><img src="/images/product/01.jpg" alt="product" /></li>
+                <li><img src="/images/product/01.jpg" alt="product" /></li>
+                <li><img src="/images/product/01.jpg" alt="product" /></li>
+                <li><img src="/images/product/01.jpg" alt="product" /></li>
+                <li><img src="/images/product/01.jpg" alt="product" /></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6">
+            <div class="view-details">
+              <h3 class="view-name">
+                <a href="product-video.html">existing product name</a>
+              </h3>
+              <div class="view-meta">
+                <p>SKU:<span>1234567</span></p>
+                <p>BRAND:<a href="#">radhuni</a></p>
+              </div>
+              <div class="view-rating">
+                <i class="active icofont-star"></i><i class="active icofont-star"></i><i
+                  class="active icofont-star"></i><i class="active icofont-star"></i><i class="icofont-star"></i><a
+                  href="product-video.html">(3 reviews)</a>
+              </div>
+              <h3 class="view-price">
+                <del>$38.00</del><span>$24.00<small>/per kilo</small></span>
+              </h3>
+              <p class="view-desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit non
+                tempora magni repudiandae sint suscipit tempore quis maxime
+                explicabo veniam eos reprehenderit fuga
+              </p>
+              <div class="view-list-group">
+                <label class="view-list-title">tags:</label>
+                <ul class="view-tag-list">
+                  <li><a href="#">organic</a></li>
+                  <li><a href="#">vegetable</a></li>
+                  <li><a href="#">chilis</a></li>
+                </ul>
+              </div>
+              <div class="view-list-group">
+                <label class="view-list-title">Share:</label>
+                <ul class="view-share-list">
+                  <li>
+                    <a href="#" class="icofont-facebook" title="Facebook"></a>
+                  </li>
+                  <li>
+                    <a href="#" class="icofont-twitter" title="Twitter"></a>
+                  </li>
+                  <li>
+                    <a href="#" class="icofont-linkedin" title="Linkedin"></a>
+                  </li>
+                  <li>
+                    <a href="#" class="icofont-instagram" title="Instagram"></a>
+                  </li>
+                </ul>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="home-index-slider slider-arrow slider-dots">
+  <div class="banner-part banner-1">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 col-lg-6">
+          <div class="banner-content">
+            <h1>Giao hàng trong 24h.</h1>
+            <p>
+              Giao hàng nhanh chỉ trong 24h
+            </p>
+            <div class="banner-btn">
+              <a class="btn btn-inline" href="/coffee"><i class="fas fa-shopping-basket"></i><span>Mua
+                  ngay</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6">
+          <div class="banner-img">
+            <img src="/images/270_crop_COOKIES-CREAM.png" alt="index" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="banner-part banner-2">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 col-lg-6">
+          <div class="banner-img">
+            <img src="/images/270_crop_GTF.png" alt="index" />
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6">
+          <div class="banner-content">
+            <h1>Giao hàng trong 24h.</h1>
+            <p>
+              Giao hàng nhanh chỉ trong 24h
+            </p>
+            <div class="banner-btn">
+              <a class="btn btn-inline" href="/coffee"><i class="fas fa-shopping-basket"></i><span>Mua
+                  ngay</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section suggest-part">
+  <div class="container">
+    <ul class="suggest-slider slider-arrow">
+      <% for(let i=0; i<category.length; i++){%>
+        <li>
+          <a class="suggest-card" href="/coffee"><img src="<%=category[i].iconcategory  %>" alt="suggest"
+              width="800px" height="200px" />
+            <h5>
+              <%=category[i].name %> 
+            </h5>
+          </a>
+        </li>
+        <% } %>
+    </ul>
+  </div>
+</section>
+<section class="section recent-part">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-heading">
+          <h2>Sản phẩm gần đây</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+      <% books.forEach((book)=>{ %>
+        <div class="col">
+          <div class="product-card">
+            <div class="product-media">
+              <div class="product-label">
+
+              </div>
+           <a class="product-image" href="/coffee/<%=book._id  %>"><img
+                  src="<%=book.img  %> " alt="product" /></a>
+
+            </div>
+            <div class="product-content">
+         
+              <h6 class="product-name">
+                <a href="/coffee/<%=book._id %>">
+                  <%= book.name %>
+                </a>
+              </h6>
+              <h6 class="product-price">
+ <span><%=book.price_buy.toLocaleString('it-IT', {
+  style: 'currency',
+  currency: 'VND'
+});%> <small>/Sản phẩm</small></span>
+              </h6>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-btn-25">
+          <a href="/coffee" class="btn btn-outline"><i class="fas fa-eye"></i><span>Xem thêm</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="section promo-part">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="promo-img">
+          <a href=""><img src="/images/banner-coffee.jpg" alt="promo" /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="section feature-part">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-heading">
+          <h2>Sản phẩm nổi bật</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2">
+      <% bookFront.forEach(book=>{ %>
+
+        <div class="col">
+          <div class="feature-card">
+            <div class="feature-media">
+              <div class="feature-label">
+              </div>
+           <a class="feature-image" href="/coffee/<%=book._id  %>"><img
+                  src="<%= book.img  %> " alt="product" /></a>
+              <!-- <div class="feature-widget">
+                <a
+                  title="Product Compare"
+                  href="compare.html"
+                  class="fas fa-random"
+                ></a
+                ><a
+                  title="Product Video"
+                  href="https://youtu.be/9xzcVxSBbG8"
+                  class="venobox fas fa-play"
+                  data-autoplay="true"
+                  data-vbtype="video"
+                ></a
+                ><a
+                  title="Product View"
+                  href="#"
+                  class="fas fa-eye"
+                  data-bs-toggle="modal"
+                  data-bs-target="#product-view"
+                ></a>
+              </div> -->
+            </div>
+            <div class="feature-content">
+              <h6 class="feature-name">
+                <a href="/coffee/<%=book._id  %>">
+                  <%= book.name %>
+                </a>
+              </h6>
+       
+              <h6 class="feature-price">
+              <span> <%=book.price_buy.toLocaleString('it-IT', {
+                style: 'currency',
+                currency: 'VND'
+            }); %> <small>/Sản phẩm</small></span>
+              </h6>
+              <p class="feature-desc">
+                <%= book.description %>
+              </p>
+
+            </div>
+          </div>
+        </div>
+
+        <% }) %>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-btn-25">
+          <a href="/coffee" class="btn btn-outline"><i class="fas fa-eye"></i><span>Xem thêm</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section countdown-part">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mx-auto">
+        <div class="countdown-content">
+          <h3>Giảm giá còn trong</h3>
+
+          <div class="countdown countdown-clock" data-countdown="2022/12/22">
+            <span class="countdown-time"><span>00</span><small>ngày</small></span><span
+              class="countdown-time"><span>00</span><small>giờ</small></span><span
+              class="countdown-time"><span>00</span><small>phút</small></span><span
+              class="countdown-time"><span>00</span><small>giây</small></span>
+          </div>
+          <a href="/coffee" class="btn btn-inline"><i class="fas fa-shopping-basket"></i><span>Mua
+              ngay</span></a>
+        </div>
+      </div>
+      <div class="col-lg-1"></div>
+      <div class="col-lg-5">
+        <div class="countdown-img">
+          <img src="/images/TRASENVANG.png" alt="countdown" />
+          <div class="countdown-off"><span>20%</span><span>off</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section newitem-part">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="section-heading">
+          <h2>Sản phẩm mới nhất</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <ul class="new-slider slider-arrow">
+          <% newBook.forEach(book=>{ %>
+
+            <li>
+              <div class="product-card">
+                <div class="product-media">
+                  <div class="product-label">
+                
+                  </div>
+                  <button class="product-wish wish">
+                   </button><a class="product-image" href="/coffee/<%=book._id  %> "><img
+                      src="<%=book.img  %> " alt="product" /></a>
+
+                </div>
+                <div class="product-content">
+
+                  <h6 class="product-name">
+                    <a href="/coffee/<%=book._id  %>">
+                      <%=book.name %>
+                    </a>
+                  </h6>
+                  <h6 class="product-price">
+  <span> <%=book.price_buy.toLocaleString('it-IT', {
+    style: 'currency',
+    currency: 'VND'
+}); %> <small>/Sản phẩm</small></span>
+                  </h6>
+
+                </div>
+              </div>
+            </li>
+            <% }) %>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="section-btn-25">
+          <a href="/coffee" class="btn btn-outline"><i class="fas fa-eye"></i><span>Xem thêm</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
